@@ -2,6 +2,7 @@ import Navbar from "./Components/Navbar"
 import Home from "./Components/Home"
 import About from "./Components/About"
 import Experience from "./Components/Experience"
+import LatestWorks from "./Components/Project"
 function App() {
 
   return (
@@ -10,6 +11,7 @@ function App() {
     <Home/>
     <About/>
     <Experience/>
+    <LatestWorks/>
     </>
   )
 }
