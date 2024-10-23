@@ -17,7 +17,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-4 py-8 bg-[#FFFFFF]">
       <div className="mb-8">
         <div className="text-sm text-gray-600 font-semibold">• Experiences</div>
         <h1 className="text-4xl font-normal mt-2 mb-4">Explore My Tech Journey</h1>
