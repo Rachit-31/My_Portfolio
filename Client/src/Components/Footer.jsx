@@ -1,13 +1,14 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'; 
+import { Link } from 'react-scroll'; // Import Link from react-scroll
 
 const Footer = () => {
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About Me', href: '#' },
-    { name: 'Portfolio', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Blog', href: '#' }
+    { name: 'Home', to: 'home' }, // `to` should match the `name` prop in the Element
+    { name: 'About Me', to: 'aboutme' },
+    { name: 'Portfolio', to: 'projects' }, // Adjust `to` values based on section names
+    { name: 'Experience', to: 'experience' },
+    { name: 'Contact Me', to: 'contact' }
   ];
 
   const socialLinks = [
@@ -22,13 +23,16 @@ const Footer = () => {
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              className="text-[#999999] hover:text-white transition-colors duration-200 text-sm"
+              to={link.to}
+              smooth={true}
+              duration={500}
+              offset={-70} // Adjust offset to account for fixed navbar height
+              className="cursor-pointer text-[#999999] hover:text-white transition-colors duration-200 text-sm"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAnimate, stagger } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
+import { Link } from "react-scroll";
 
 function useMenuAnimation(isOpen) {
   const [scope, animate] = useAnimate();
@@ -52,26 +53,51 @@ export default function Navbar() {
             {/* Logo and Links */}
             <div className="flex items-center space-x-4 gap-14">
               <div className="flex-shrink-0">
-                <a href="#" className="text-black text-xl font-bold"><img src="src/assets/Jaguar.png" alt="" className="w-12"/></a>
+                <a href="#" className="text-black text-xl font-bold">
+                  <img src="src/assets/Jaguar.png" alt="" className="w-12" />
+                </a>
               </div>
               <div className="hidden md:flex space-x-3">
-                <a href="#experience" className="text-black  px-2 py-2 rounded-md text-sm font-medium">
-                  Experience
-                </a>
-                <a href="#projects" className="text-black px-2 py-2 rounded-md text-sm font-medium">
-                  Projects
-                </a>
-                <a href="#aboutme" className="text-black  px-2 py-2 rounded-md text-sm font-medium">
+                <Link
+                  to="aboutme"
+                  smooth={true}
+                  duration={500}
+                  className="text-black px-2 py-2 rounded-md text-sm font-medium cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
                   About Me
-                </a>
+                </Link>
+                <Link
+                  to="experience"
+                  smooth={true}
+                  duration={500}
+                  className="text-black px-2 py-2 rounded-md text-sm font-medium cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Experience
+                </Link>
+                <Link
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  className="text-black px-2 py-2 rounded-md text-sm font-medium cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Projects
+                </Link>
               </div>
             </div>
 
             {/* Contact and Mobile Menu Button */}
             <div className="hidden md:block">
-              <a href="#contact" className="text-black  px-3 py-2 rounded-md text-sm font-medium">
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="text-black px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+              >
                 Contact Me
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -99,24 +125,48 @@ export default function Navbar() {
       >
         <ul className="space-y-4 p-4">
           <li>
-            <a href="#experience" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            <Link
+              to="experience"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
               Experience
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#aboutme" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            <Link
+              to="aboutme"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
               About Me
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
               Contact Me
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
