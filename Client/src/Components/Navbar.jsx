@@ -50,18 +50,18 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo and Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 gap-14">
               <div className="flex-shrink-0">
                 <a href="#" className="text-black text-xl font-bold">MyLogo</a>
               </div>
-              <div className="hidden md:flex space-x-4">
+              <div className="hidden md:flex space-x-3">
                 <a href="#experience" className="text-black  px-2 py-2 rounded-md text-sm font-medium">
                   Experience
                 </a>
-                <a href="#projects" className="text-black hover:text-white px-2 py-2 rounded-md text-sm font-medium">
+                <a href="#projects" className="text-black px-2 py-2 rounded-md text-sm font-medium">
                   Projects
                 </a>
-                <a href="#aboutme" className="text-black hover:text-white px-2 py-2 rounded-md text-sm font-medium">
+                <a href="#aboutme" className="text-black  px-2 py-2 rounded-md text-sm font-medium">
                   About Me
                 </a>
               </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
 
             {/* Contact and Mobile Menu Button */}
             <div className="hidden md:block">
-              <a href="#contact" className="text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <a href="#contact" className="text-black  px-3 py-2 rounded-md text-sm font-medium">
                 Contact Me
               </a>
             </div>
