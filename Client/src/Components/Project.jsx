@@ -47,7 +47,7 @@ const LatestWorks = () => {
       githubLink: ""
     },
     {
-      image: "https://c.ndtvimg.com/2024-04/mld4lltg_virat-kohli-rcb-bcci_625x300_07_April_24.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605",
+      image: "/src/assets/Portfolio/Portfolio.png",
       title: "Portfolio Website",
       websiteLink: "",
       githubLink: "https://github.com/Rachit-31/My_Portfolio"
