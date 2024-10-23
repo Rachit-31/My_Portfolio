@@ -52,7 +52,7 @@ export default function Navbar() {
             {/* Logo and Links */}
             <div className="flex items-center space-x-4 gap-14">
               <div className="flex-shrink-0">
-                <a href="#" className="text-black text-xl font-bold">MyLogo</a>
+                <a href="#" className="text-black text-xl font-bold"><img src="src/assets/Jaguar.png" alt="" className="w-12"/></a>
               </div>
               <div className="hidden md:flex space-x-3">
                 <a href="#experience" className="text-black  px-2 py-2 rounded-md text-sm font-medium">
