@@ -62,7 +62,7 @@ const LatestWorks = () => {
     <section className="max-w-7xl mx-auto px-4 py-16 bg-tertiary rounded-t-2xl">
       <div className="flex items-center justify-between mb-12">
         <div>
-          <span className="text-sm mb-2 block  text-gray-600 font-semibold">• Portfolio</span>
+          <span className="text-sm mb-2  inline-block px-4 py-1 rounded-full bg-gray-100 font-semibold">• Portfolio</span>
           <h2 className="text-4xl font-medium">Latest Works</h2>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Experience = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 bg-[#FFFFFF]">
       <div className="mb-8">
-        <div className="text-sm text-gray-600 font-semibold">• Experiences</div>
+        <div className="inline-block px-4 py-1 rounded-full bg-gray-100 text-sm  font-semibold">• Experiences</div>
         <h1 className="text-4xl font-medium mt-2 mb-4">Explore My Tech Journey</h1>
         <p className="text-gray-600 mb-4">
           Over the past years, I've worked on several full stack development projects, gaining extensive experience in various technologies and collaborating with teams to deliver impactful software solutions.
