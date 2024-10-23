@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'; 
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { Link } from 'react-scroll'; 
 
 const Footer = () => {
   const navLinks = [
-    { name: 'Home', to: 'home' }, // `to` should match the `name` prop in the Element
+    { name: 'Home', to: 'home' }, 
     { name: 'About Me', to: 'aboutme' },
-    { name: 'Portfolio', to: 'projects' }, // Adjust `to` values based on section names
+    { name: 'Portfolio', to: 'projects' }, 
     { name: 'Experience', to: 'experience' },
     { name: 'Contact Me', to: 'contact' }
   ];
@@ -28,7 +28,7 @@ const Footer = () => {
               to={link.to}
               smooth={true}
               duration={500}
-              offset={-70} // Adjust offset to account for fixed navbar height
+              offset={-70} 
               className="cursor-pointer text-[#999999] hover:text-white transition-colors duration-200 text-sm"
             >
               {link.name}
