@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'; // Ensure you have installed emailjs-com
 import { ArrowUpRight } from 'lucide-react';
 
 const ContactForm = () => {
@@ -19,28 +20,44 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    emailjs
+      .send(
+        'service_6hecu6p', // EmailJS service ID
+        'template_0rbavtj', // EmailJS template ID
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          message: formData.message,
+        },
+        'gThWRRtokMwL2sGwr' // EmailJS public key
+      )
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Reset form
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      {/* Header Section */}
       <div className="text-center mb-8">
         <div className="inline-block px-4 py-1 rounded-full bg-gray-100 font-semibold text-sm mb-4">
-        • Contact Us
+          • Contact Us
         </div>
         <h1 className="text-3xl md:text-4xl font-medium mb-4">
-        Get in Touch with Rachit Jain
+          Get in Touch with Rachit Jain
         </h1>
         <p className="text-gray-600 max-w-xl mx-auto">
-        I’d love to connect with you! Whether you have a project in mind, need development advice, or want to collaborate, feel free to reach out by filling out the form below.
+          I’d love to connect with you! Whether you have a project in mind, need development advice, or want to collaborate, feel free to reach out by filling out the form below.
         </p>
       </div>
 
       {/* Contact Form */}
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* First Name */}
         <div>
           <label htmlFor="firstName" className="block text-sm mb-2">
             First name
@@ -57,7 +74,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Last Name */}
         <div>
           <label htmlFor="lastName" className="block text-sm mb-2">
             Last name
@@ -74,7 +90,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Email */}
         <div>
           <label htmlFor="email" className="block text-sm mb-2">
             Email
@@ -91,7 +106,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Message */}
         <div>
           <label htmlFor="message" className="block text-sm mb-2">
             Message
@@ -108,7 +122,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-black text-white py-3 px-6 rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition group"
