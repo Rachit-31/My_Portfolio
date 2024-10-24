@@ -2,14 +2,14 @@ const Path = (props) => (
     <path
       fill="transparent"
       strokeWidth="3"
-      stroke="black" // Ensure this is set to a contrasting color
+      stroke="black" 
       strokeLinecap="round"
       {...props}
     />
   );
   
   export const MenuToggle = ({ toggle, isOpen }) => (
-    <button onClick={toggle} className="flex items-center justify-center p-2 text-gray-800">
+    <button onClick={toggle} className="flex items-center justify-center p-2 text-white">
       <svg width="23" height="18" viewBox="0 0 23 18">
         <Path
           d="M 2 2.5 L 20 2.5" // Top line
