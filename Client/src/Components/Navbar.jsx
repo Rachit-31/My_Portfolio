@@ -73,7 +73,7 @@ export default function Navbar() {
                   className="text-black px-2 py-2 rounded-md text-sm font-medium cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
-                  About M
+                  About Me
                 </Link>
                 <Link
                   to="experience"
