@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com'; // Ensure you have installed emailjs-com
+import emailjs from 'emailjs-com';
 import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion'; // Import framer-motion
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -23,41 +24,67 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        'service_6hecu6p', // EmailJS service ID
-        'template_0rbavtj', // EmailJS template ID
+        'service_6hecu6p', 
+        'template_0rbavtj', 
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
           message: formData.message,
         },
-        'gThWRRtokMwL2sGwr' // EmailJS public key
+        'gThWRRtokMwL2sGwr'
       )
       .then((response) => {
         console.log('Email sent successfully!', response);
-        setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Reset form
+        setFormData({ firstName: '', lastName: '', email: '', message: '' });
       })
       .catch((error) => {
         console.error('Error sending email:', error);
       });
   };
 
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <motion.div 
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+      className="max-w-2xl mx-auto px-4 py-12"
+    >
       <div className="text-center mb-8">
         <div className="inline-block px-4 py-1 rounded-full bg-gray-100 font-semibold text-sm mb-4">
           • Contact Me
         </div>
-        <h1 className="text-3xl md:text-4xl font-medium mb-4">
+        <motion.h1 
+          className="text-3xl md:text-4xl font-medium mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           Get in Touch with Rachit Jain
-        </h1>
-        <p className="text-gray-600 max-w-xl mx-auto">
+        </motion.h1>
+        <motion.p 
+          className="text-gray-600 max-w-xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
           I’d love to connect with you! Whether you have a project in mind, need development advice, or want to collaborate, feel free to reach out by filling out the form below.
-        </p>
+        </motion.p>
       </div>
 
       {/* Contact Form */}
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <motion.form 
+        onSubmit={handleSubmit} 
+        className="space-y-6"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
         <div>
           <label htmlFor="firstName" className="block text-sm mb-2">
             First name
@@ -122,15 +149,17 @@ const ContactForm = () => {
           />
         </div>
 
-        <button
+        <motion.button
           type="submit"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className="w-full bg-black text-white py-3 px-6 rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition group"
         >
           Send Message
           <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-        </button>
-      </form>
-    </div>
+        </motion.button>
+      </motion.form>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Animation variants for the portfolio cards
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+};
 
 const PortfolioCard = ({ image, title, websiteLink, githubLink }) => (
-  <div className="relative group cursor-pointer">
+  <motion.div 
+    className="relative group cursor-pointer"
+    variants={cardVariants} // Apply animation to each card
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+  >
     <div className="rounded-2xl overflow-hidden">
       <img 
         src={image} 
@@ -33,7 +46,7 @@ const PortfolioCard = ({ image, title, websiteLink, githubLink }) => (
         </ul>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 const LatestWorks = () => {
@@ -67,8 +80,19 @@ const LatestWorks = () => {
         </div>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Grid with motion container */}
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.2, // Stagger the portfolio cards
+            },
+          },
+        }}
+      >
         {works.slice(0, visibleWorks).map((work, index) => (
           <a href={work.websiteLink || work.githubLink} key={index} target="_blank" rel="noopener noreferrer">
             <PortfolioCard
@@ -79,17 +103,19 @@ const LatestWorks = () => {
             />
           </a>
         ))}
-      </div>
+      </motion.div>
 
       {visibleWorks < works.length && (
         <div className="mt-12 text-center">
-          <div 
-            className="inline-flex items-center gap-2 cursor-pointer group" 
+          <motion.div
+            className="inline-flex items-center gap-2 cursor-pointer group"
             onClick={handleShowMore} // Trigger show more
+            initial={{ opacity: 0, y: 20 }} // Animation for the button
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
           >
             <span className="font-medium">Check out More</span>
             <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </div>
+          </motion.div>
         </div>
       )}
     </section>

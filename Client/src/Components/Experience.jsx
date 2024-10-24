@@ -1,8 +1,19 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
-// Animation variants for fading in and staggering children
+// Variants for parent container to stagger child animations
+const container = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // Delay between each child animation
+    },
+  },
+};
+
+// Animation variants for each experience card
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } }
@@ -26,14 +37,7 @@ const Experience = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 bg-[#FFFFFF]">
-      {/* Header Section */}
-      <motion.div
-        className="mb-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      <div className="mb-8">
         <div className="inline-block px-4 py-1 rounded-full bg-gray-100 text-sm font-semibold">
           • Experiences
         </div>
@@ -41,9 +45,7 @@ const Experience = () => {
           Explore My Tech Journey
         </h1>
         <p className="text-gray-600 mb-4">
-          Over the past years, I've worked on several full stack development
-          projects, gaining extensive experience in various technologies and
-          collaborating with teams to deliver impactful software solutions.
+          Over the past years, I've worked on several full stack development projects, gaining extensive experience in various technologies and collaborating with teams to deliver impactful software solutions.
         </p>
         <div className="hidden md:block">
           <Link
@@ -70,21 +72,21 @@ const Experience = () => {
             </span>
           </Link>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Experience Cards */}
+      {/* Motion container for staggered animations */}
       <motion.div
         className="space-y-8"
+        variants={container} // Apply parent container variants
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
+        viewport={{ once: true }} // Trigger animation when in view
       >
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
             className="border-t pt-8 grid grid-cols-1 md:grid-cols-2 gap-4"
-            variants={fadeInUp}
+            variants={fadeInUp} // Apply fadeInUp animation for each experience
           >
             <div>
               <h3 className="text-xl font-normal mb-2">{exp.company}</h3>
