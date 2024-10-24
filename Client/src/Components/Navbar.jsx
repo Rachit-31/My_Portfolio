@@ -62,7 +62,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-4 gap-14">
               <div className="flex-shrink-0">
                 <a href="#" className="text-black text-xl font-bold">
-                  <img src="src/assets/Jaguar.png" alt="logo" className="w-12" />
+                  <img src="/Jaguar.png" alt="logo" className="w-12" />
                 </a>
               </div>
               <div className="hidden md:flex space-x-3">
