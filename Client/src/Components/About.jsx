@@ -1,5 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Import Framer Motion
 import { ArrowUpRight, Plus } from 'lucide-react';
+
+// Animation variants for scroll-based animations
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } }
+};
 
 const AboutMe = () => {
   return (
@@ -7,7 +14,13 @@ const AboutMe = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           {/* Left Column */}
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
             <div>
               <h1 className="text-4xl font-normal mb-6">About Me</h1>
               <p className="text-gray-600 leading-relaxed">
@@ -17,31 +30,22 @@ const AboutMe = () => {
               </p>
             </div>
 
-            {/* Large Arrow SVG */}
-            <div className="hidden md:block opacity-20">
-              {/* <svg 
-                width="200" 
-                height="200" 
-                viewBox="0 0 200 200" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  d="M40 160 C 40 80, 120 80, 160 40" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  fill="none"
-                />
-              </svg> */}
-              {/* <img src="https://www.svgrepo.com/show/408495/arrow-02.svg" alt="arrow" className='w-[20rem]' /> */}
+            {/* Large Arrow */}
+            <motion.div className="hidden md:block opacity-20" variants={fadeIn}>
               <img src="https://cdn-icons-png.flaticon.com/512/724/724972.png" alt="arrow" className='w-[15rem]' />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Column */}
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
             {/* Stats Card */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm">
+            <motion.div className="bg-white p-8 rounded-2xl shadow-sm" variants={fadeIn}>
               <div className="mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -56,17 +60,17 @@ const AboutMe = () => {
               </div>
               
               {/* Profile Image */}
-              <div className="relative">
+              <motion.div className="relative" variants={fadeIn}>
                 <img 
                   src="/Rachit2.png" 
                   alt="Rachit Jain" 
                   className="w-full h-auto rounded-xl"
                 />
-              </div>
-            </div>
- 
+              </motion.div>
+            </motion.div>
+
             {/* Experience Points */}
-            <div className="space-y-6">
+            <motion.div className="space-y-6" variants={fadeIn}>
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
@@ -99,8 +103,8 @@ const AboutMe = () => {
                   Passionate about <span className="font-semibold">Competitive Programming</span>, with a drive to solve complex algorithms and challenges.
                 </p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

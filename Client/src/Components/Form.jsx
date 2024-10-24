@@ -46,7 +46,7 @@ const ContactForm = () => {
     <div className="max-w-2xl mx-auto px-4 py-12">
       <div className="text-center mb-8">
         <div className="inline-block px-4 py-1 rounded-full bg-gray-100 font-semibold text-sm mb-4">
-          • Contact Us
+          • Contact Me
         </div>
         <h1 className="text-3xl md:text-4xl font-medium mb-4">
           Get in Touch with Rachit Jain

@@ -1,5 +1,12 @@
 import React from 'react';
-import { Link } from 'react-scroll'; 
+import { motion } from 'framer-motion'; // Import Framer Motion
+import { Link } from 'react-scroll';
+
+// Animation variants for fading in and staggering children
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } }
+};
 
 const Experience = () => {
   const experiences = [
@@ -7,7 +14,7 @@ const Experience = () => {
       company: "Amvit Pharmaceuticals, Delhi",
       period: "October 2024 - Present",
       role: "Full Stack Developer Intern",
-      tags: ["React", "GraphQL", "Full Stack Development","Tailwind css"]
+      tags: ["React", "GraphQL", "Full Stack Development", "Tailwind css"]
     },
     {
       company: "Indian Institute of Information Technology, Una (IIIT Una)",
@@ -19,8 +26,15 @@ const Experience = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 bg-[#FFFFFF]">
-      <div className="mb-8">
-        <div className="inline-block px-4 py-1 rounded-full bg-gray-100 text-sm  font-semibold">
+      {/* Header Section */}
+      <motion.div
+        className="mb-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <div className="inline-block px-4 py-1 rounded-full bg-gray-100 text-sm font-semibold">
           • Experiences
         </div>
         <h1 className="text-4xl font-medium mt-2 mb-4">
@@ -56,13 +70,21 @@ const Experience = () => {
             </span>
           </Link>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="space-y-8">
+      {/* Experience Cards */}
+      <motion.div
+        className="space-y-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         {experiences.map((exp, index) => (
-          <div
+          <motion.div
             key={index}
             className="border-t pt-8 grid grid-cols-1 md:grid-cols-2 gap-4"
+            variants={fadeInUp}
           >
             <div>
               <h3 className="text-xl font-normal mb-2">{exp.company}</h3>
@@ -81,9 +103,9 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
