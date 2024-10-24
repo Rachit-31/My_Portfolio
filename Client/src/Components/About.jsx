@@ -22,7 +22,7 @@ const AboutMe = () => {
             variants={fadeIn}
           >
             <div>
-              <h1 className="text-4xl font-normal mb-6">About Me</h1>
+              <h1 className="text-4xl font-medium mb-6">About Me</h1>
               <p className="text-gray-600 leading-relaxed">
                 I am currently pursuing a Bachelor's degree in{" "}
                 <span className="font-semibold text-primary">

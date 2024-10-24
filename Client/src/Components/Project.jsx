@@ -62,8 +62,8 @@ const LatestWorks = () => {
     {
       image: "/Portfolio/Portfolio.png",
       title: "Portfolio Website",
-      websiteLink: "",
-      githubLink: "https://rachitjain-ashen.vercel.app/"
+      websiteLink: "https://rachitjain-ashen.vercel.app/",
+      githubLink: ""
     }
   ];
 

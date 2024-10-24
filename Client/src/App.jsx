@@ -6,6 +6,7 @@ import Experience from "./Components/Experience";
 import LatestWorks from "./Components/Project";
 import ConsultationForm from "./Components/Form";
 import Footer from "./Components/Footer";
+import Languages from "./Components/Languages";
 import { Element } from "react-scroll"; // Import Element from react-scroll
 
 function App() {
@@ -31,7 +32,9 @@ function App() {
       {/* Latest Works Section */}
       <Element name="projects" id="projects">
         <LatestWorks />
+        <Languages/>
       </Element>
+
       
       {/* Consultation Form Section */}
       <Element name="contact" id="contact">
