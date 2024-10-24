@@ -58,7 +58,7 @@ const AboutMe = () => {
               {/* Profile Image */}
               <div className="relative">
                 <img 
-                  src="/src/assets/Rachit2.png" 
+                  src="/Rachit2.png" 
                   alt="Rachit Jain" 
                   className="w-full h-auto rounded-xl"
                 />

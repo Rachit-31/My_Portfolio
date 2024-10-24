@@ -55,7 +55,7 @@ const Homepage = () => {
       {/* Image Section */}
       <div className="flex-1 h-[50vh] md:h-full w-full overflow-hidden mt-8 md:mt-0">
         <img
-          src="/src/assets/Rachit2.png" 
+          src="/Rachit2.png" 
           alt="Rachit Jain"
           className="object-cover w-full h-full"
         />

@@ -41,13 +41,13 @@ const LatestWorks = () => {
 
   const works = [
     {
-      image: "/src/assets/Portfolio/IIIT_Una.png",
+      image: "/Portfolio/IIIT_Una.png",
       title: "IIIT Una",
       websiteLink: "https://iiitu.ac.in/",
       githubLink: ""
     },
     {
-      image: "/src/assets/Portfolio/Portfolio.png",
+      image: "/Portfolio/Portfolio.png",
       title: "Portfolio Website",
       websiteLink: "",
       githubLink: "https://github.com/Rachit-31/My_Portfolio"
