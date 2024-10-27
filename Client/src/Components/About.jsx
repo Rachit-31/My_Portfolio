@@ -24,7 +24,7 @@ const AboutMe = () => {
             <div>
               <h1 className="text-4xl font-medium mb-6">About Me</h1>
               <p className="text-gray-600 leading-relaxed">
-                I am currently pursuing a Bachelor's degree in{" "}
+                My name is Rachit Jain. I am currently pursuing a Bachelor's degree in{" "}
                 <span className="font-semibold text-primary">
                   Electronics and Communication Engineering
                 </span>{" "}
