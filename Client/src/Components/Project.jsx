@@ -50,7 +50,7 @@ const PortfolioCard = ({ image, title, websiteLink, githubLink }) => (
 );
 
 const LatestWorks = () => {
-  const [visibleWorks, setVisibleWorks] = useState(3); // Show initial 3 works
+  const [visibleWorks, setVisibleWorks] = useState(3); 
 
   const works = [
     {
@@ -64,6 +64,12 @@ const LatestWorks = () => {
       title: "Portfolio Website",
       websiteLink: "https://rachitjain-ashen.vercel.app/",
       githubLink: ""
+    },
+    {
+      image: "/Portfolio/Code.png",
+      title: "AI_Summarizer",
+      websiteLink: "",
+      githubLink: "https://github.com/Rachit-31/AI_Summarizer"
     }
   ];
 
@@ -88,7 +94,7 @@ const LatestWorks = () => {
         variants={{
           visible: {
             transition: {
-              staggerChildren: 0.2, // Stagger the portfolio cards
+              staggerChildren: 0.2, 
             },
           },
         }}
@@ -109,8 +115,8 @@ const LatestWorks = () => {
         <div className="mt-12 text-center">
           <motion.div
             className="inline-flex items-center gap-2 cursor-pointer group"
-            onClick={handleShowMore} // Trigger show more
-            initial={{ opacity: 0, y: 20 }} // Animation for the button
+            onClick={handleShowMore} 
+            initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
           >
             <span className="font-medium">Check out More</span>
