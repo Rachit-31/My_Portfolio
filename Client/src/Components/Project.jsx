@@ -67,9 +67,15 @@ const LatestWorks = () => {
     },
     {
       image: "/Portfolio/Code.png",
-      title: "AI_Summarizer",
+      title: "AI Summarizer",
       websiteLink: "",
       githubLink: "https://github.com/Rachit-31/AI_Summarizer"
+    },
+    {
+      image: "/Portfolio/Gym.png",
+      title: "Evogym",
+      websiteLink: "",
+      githubLink: "https://github.com/Rachit-31/FitJourney"
     }
   ];
 
