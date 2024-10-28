@@ -1,7 +1,8 @@
 // src/Languages.js
 import React from 'react';
 import { FaReact, FaNodeJs, FaGitSquare } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiCplusplus, SiHtml5, SiCss3, SiTailwindcss, SiBootstrap, SiExpress } from 'react-icons/si';
+import { SiTypescript, SiMongodb, SiCplusplus, SiHtml5, SiCss3, SiTailwindcss, SiBootstrap, SiExpress} from 'react-icons/si';
+import { IoLogoJavascript } from "react-icons/io5";
 
 const Languages = () => {
   const technologies = [
@@ -11,7 +12,7 @@ const Languages = () => {
     { name: 'TypeScript', icon: <SiTypescript size={40} /> },
     { name: 'C++', icon: <SiCplusplus size={40} /> },
     { name: 'C', icon: <SiCplusplus size={40} /> },
-    { name: 'JavaScript', icon: <SiTypescript size={40} /> },
+    { name: 'JavaScript', icon: <IoLogoJavascript  size={40} /> },
     { name: 'Express', icon: <SiExpress size={40} /> },
     { name: 'HTML', icon: <SiHtml5 size={40} /> },
     { name: 'CSS', icon: <SiCss3 size={40} /> },
