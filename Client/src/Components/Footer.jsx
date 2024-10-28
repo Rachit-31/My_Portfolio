@@ -6,8 +6,8 @@ const Footer = () => {
   const navLinks = [
     { name: 'Home', to: 'home' }, 
     { name: 'About Me', to: 'aboutme' },
-    { name: 'Portfolio', to: 'projects' }, 
     { name: 'Experience', to: 'experience' },
+    { name: 'Portfolio', to: 'projects' }, 
     { name: 'Contact Me', to: 'contact' }
   ];
 
