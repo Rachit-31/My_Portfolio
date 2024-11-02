@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion'; // Import framer-motion
+import { motion } from 'framer-motion';
+import toast from 'react-hot-toast';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,10 +11,11 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false); // Loading state
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value
     }));
@@ -21,11 +23,12 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form is submitted
 
     emailjs
       .send(
-        'service_6hecu6p', 
-        'template_0rbavtj', 
+        'service_6hecu6p',
+        'template_0rbavtj',
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -35,11 +38,14 @@ const ContactForm = () => {
         'gThWRRtokMwL2sGwr'
       )
       .then((response) => {
-        console.log('Email sent successfully!', response);
+        toast.success('Email sent successfully!');
         setFormData({ firstName: '', lastName: '', email: '', message: '' });
+        setLoading(false); // Reset loading state
       })
       .catch((error) => {
+        toast.error('Error sending email. Please try again.');
         console.error('Error sending email:', error);
+        setLoading(false); // Reset loading state
       });
   };
 
@@ -49,7 +55,7 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial="hidden"
       animate="visible"
       variants={fadeIn}
@@ -59,7 +65,7 @@ const ContactForm = () => {
         <div className="inline-block px-4 py-1 rounded-full bg-gray-100 font-semibold text-sm mb-4">
           • Contact Me
         </div>
-        <motion.h1 
+        <motion.h1
           className="text-3xl md:text-4xl font-medium mb-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -67,7 +73,7 @@ const ContactForm = () => {
         >
           Get in Touch with Rachit Jain
         </motion.h1>
-        <motion.p 
+        <motion.p
           className="text-gray-600 max-w-xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -78,8 +84,8 @@ const ContactForm = () => {
       </div>
 
       {/* Contact Form */}
-      <motion.form 
-        onSubmit={handleSubmit} 
+      <motion.form
+        onSubmit={handleSubmit}
         className="space-y-6"
         initial="hidden"
         animate="visible"
@@ -153,10 +159,19 @@ const ContactForm = () => {
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full bg-black text-white py-3 px-6 rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition group"
+          className={`w-full py-3 px-6 rounded-full flex items-center justify-center gap-2 transition group ${
+            loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-black text-white hover:opacity-90'
+          }`}
+          disabled={loading}
         >
-          Send Message
-          <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          {loading ? (
+            <span className="loader"></span> // Replace this with a spinner if you have one
+          ) : (
+            <>
+              Send Message
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </>
+          )}
         </motion.button>
       </motion.form>
     </motion.div>
