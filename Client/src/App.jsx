@@ -32,7 +32,7 @@ function App() {
       {/* Latest Works Section */}
       <Element name="projects" id="projects">
         <LatestWorks />
-        <Languages/>
+        {/* <Languages/> */}
       </Element>
 
       
