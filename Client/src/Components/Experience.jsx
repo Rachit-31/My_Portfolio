@@ -31,7 +31,7 @@ const Experience = () => {
       company: "Indian Institute of Information Technology, Una (IIIT Una)",
       period: "April 2024 - June 2024",
       role: "Full Stack Developer",
-      tags: ["MERN Stack", "Full Stack Development", "Tailwind css"]
+      tags: ["Mongodb", "Express.js", "React", "Node.js", "TypeScript", "Tailwind css", "HTML"]
     }
   ];
 
