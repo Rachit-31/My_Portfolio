@@ -1,24 +1,55 @@
-import React from 'react';
-import { motion } from 'framer-motion'; // Import Framer Motion
-import { ArrowUpRight, Plus } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
+import { ArrowUpRight, Plus } from "lucide-react";
 
-// Animation variants for scroll-based animations
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeInOut' } }
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
 };
 
 const AboutMe = () => {
   const techStack = [
-    'HTML', 'CSS', 'JavaScript', 'TypeScript', 'C++', 'SQL', 
-    'GraphQL', 'GitHub', 'MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS'
-  ];  
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "C++",
+    "SQL",
+    "GraphQL",
+    "GitHub",
+    "MongoDB",
+    "Express",
+    "React",
+    "Node.js",
+    "Tailwind CSS",
+  ];
+
+  const profiles = [
+    {
+      platform: "LeetCode",
+      url: "#",
+      icon: "/CodingProfile/Leetcode.svg",
+    },
+    {
+      platform: "Codeforces",
+      url: "#",
+      icon: "/CodingProfile/Codeforces.svg",
+    },
+    {
+      platform: "CodeChef",
+      url: "https://www.codechef.com/users/rachit_31",
+      icon: "/CodingProfile/Codechef.svg",
+    },
+  ];
 
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-          {/* Left Column */}
           <motion.div
             className="space-y-8"
             initial="hidden"
@@ -29,7 +60,8 @@ const AboutMe = () => {
             <div>
               <h1 className="text-4xl font-medium mb-6">About Me</h1>
               <p className="text-gray-600 leading-relaxed">
-                My name is Rachit Jain. I am currently pursuing a Bachelor's degree in{" "}
+                My name is Rachit Jain. I am currently pursuing a Bachelor's
+                degree in{" "}
                 <span className="font-semibold text-primary">
                   Electronics and Communication Engineering
                 </span>{" "}
@@ -46,7 +78,6 @@ const AboutMe = () => {
               </p>
             </div>
 
-            {/* Tech Stack */}
             <div className="mt-8">
               <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
               <div className="flex flex-wrap gap-4">
@@ -61,10 +92,32 @@ const AboutMe = () => {
               </div>
             </div>
 
-            <div
-              className="hidden md:block opacity-10"
-              variants={fadeIn}
-            >
+            <div className="mt-8">
+              <h2 className="text-2xl font-semibold mb-4">Coding Profiles</h2>
+              <div className="flex flex-col gap-4">
+                {profiles.map((profile, index) => (
+                  <a
+                    key={index}
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg hover:bg-gray-200 transition"
+                  >
+                    <img
+                      src={profile.icon}
+                      alt={`${profile.platform} Icon`}
+                      className="w-10 h-10"
+                    />
+                    <span className="text-lg font-medium">
+                      {profile.platform}
+                    </span>
+                    <ArrowUpRight className="ml-auto text-gray-500" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="hidden md:block opacity-10" variants={fadeIn}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/724/724972.png"
                 alt="arrow"
@@ -73,7 +126,6 @@ const AboutMe = () => {
             </div>
           </motion.div>
 
-          {/* Right Column */}
           <motion.div
             className="space-y-8"
             initial="hidden"
@@ -81,7 +133,6 @@ const AboutMe = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            {/* Stats Card */}
             <motion.div
               className="bg-white p-8 rounded-2xl shadow-sm"
               variants={fadeIn}
@@ -104,7 +155,6 @@ const AboutMe = () => {
                 </p>
               </div>
 
-              {/* Profile Image */}
               <motion.div className="relative" variants={fadeIn}>
                 <img
                   src="/Rachit2.png"
@@ -114,11 +164,10 @@ const AboutMe = () => {
               </motion.div>
             </motion.div>
 
-            {/* Experience Points */}
             <motion.div className="space-y-6" variants={fadeIn}>
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <Plus className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -133,7 +182,7 @@ const AboutMe = () => {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <Plus className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -148,7 +197,7 @@ const AboutMe = () => {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <Plus className="w-5 h-5 text-white" />
                   </div>
                 </div>
