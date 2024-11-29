@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion"; 
 import { ArrowUpRight, Plus } from "lucide-react";
 
 const fadeIn = {
