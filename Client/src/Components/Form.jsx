@@ -11,7 +11,7 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +23,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when form is submitted
+    setLoading(true); 
 
     emailjs
       .send(
@@ -40,12 +40,12 @@ const ContactForm = () => {
       .then((response) => {
         toast.success('Email sent successfully!');
         setFormData({ firstName: '', lastName: '', email: '', message: '' });
-        setLoading(false); // Reset loading state
+        setLoading(false); 
       })
       .catch((error) => {
         toast.error('Error sending email. Please try again.');
         console.error('Error sending email:', error);
-        setLoading(false); // Reset loading state
+        setLoading(false); 
       });
   };
 
@@ -133,7 +133,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="rachitjainjaipur@gmail.com"
+            placeholder="youremail@gmail.com"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:border-transparent outline-none transition"
             required
           />
@@ -165,7 +165,7 @@ const ContactForm = () => {
           disabled={loading}
         >
           {loading ? (
-            <span className="loader"></span> // Replace this with a spinner if you have one
+            <span className="loader"></span> 
           ) : (
             <>
               Send Message

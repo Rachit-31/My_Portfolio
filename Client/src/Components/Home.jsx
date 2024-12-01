@@ -14,7 +14,6 @@ const Homepage = () => {
 
   const [currentTagline, cycleTagline] = useCycle(...taglines);
 
-  // Animation variants for different sections
   const textVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } }
@@ -36,29 +35,29 @@ const Homepage = () => {
       initial="hidden"
       animate="visible"
     >
-      {/* Text Section */}
+
       <motion.div 
         className="flex-1 flex flex-col justify-center items-start md:items-end ml-4 md:ml-11 relative"
         variants={textVariant}
       >
         <h1 className="text-9xl md:text-[13rem] tracking-tighter px-4">Hello</h1>
 
-        {/* Typing effect for taglines */}
+
         <motion.p
           className="mt-2 text-3xl md:text-2xl"
           key={currentTagline}
           animate={{ opacity: [0, 1], y: [-20, 0] }}
           transition={{ duration: 0.8 }}
           onAnimationComplete={() => {
-            setTimeout(cycleTagline, 2000); // Cycle tagline after 2 seconds
+            setTimeout(cycleTagline, 2000); 
           }}
         >
           - {currentTagline}
         </motion.p>
 
-        {/* Social Links Section */}
+
         <div className="absolute left-0 bottom-0 mb-4 flex items-center">
-          {/* Vertical Line */}
+ 
           <div className="h-10 w-[2px] bg-gray-300 mr-4"></div>
 
           <motion.div className="flex flex-col space-y-2" variants={iconVariant}>
@@ -75,7 +74,7 @@ const Homepage = () => {
         </div>
       </motion.div>
 
-      {/* Image Section */}
+
       <motion.div
         className="flex-1 h-[50vh] md:h-full w-full overflow-hidden mt-8 md:mt-0"
         variants={imageVariant}
