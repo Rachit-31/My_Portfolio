@@ -1,6 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { ArrowUpRight, Plus } from "lucide-react";
+import {
+  techStack,
+  profiles,
+  achievements,
+  AboutDetail,
+} from "../static/Content.jsx";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -12,40 +18,6 @@ const fadeIn = {
 };
 
 const AboutMe = () => {
-  const techStack = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "C++",
-    "SQL",
-    "GraphQL",
-    "GitHub",
-    "MongoDB",
-    "Express",
-    "React",
-    "Node.js",
-    "Tailwind CSS",
-  ];
-
-  const profiles = [
-    {
-      platform: "LeetCode",
-      url: "#",
-      icon: "/CodingProfile/Leetcode.svg",
-    },
-    {
-      platform: "Codeforces",
-      url: "#",
-      icon: "/CodingProfile/Codeforces.svg",
-    },
-    {
-      platform: "CodeChef",
-      url: "https://www.codechef.com/users/rachit_31",
-      icon: "/CodingProfile/Codechef.svg",
-    },
-  ];
-
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
@@ -60,21 +32,7 @@ const AboutMe = () => {
             <div>
               <h1 className="text-4xl font-medium mb-6">About Me</h1>
               <p className="text-gray-600 leading-relaxed">
-                My name is Rachit Jain. I am currently pursuing a Bachelor's
-                degree in{" "}
-                <span className="font-semibold text-primary">
-                  Electronics and Communication Engineering
-                </span>{" "}
-                at <span className="font-semibold text-primary">IIIT Una</span>.
-                Alongside my studies, I specialize in{" "}
-                <span className="font-semibold text-primary">
-                  Full Stack Web Development
-                </span>
-                , and I am a dedicated{" "}
-                <span className="font-semibold text-primary">
-                  Competitive Programmer
-                </span>
-                .
+                <AboutDetail />
               </p>
             </div>
 
@@ -165,48 +123,16 @@ const AboutMe = () => {
             </motion.div>
 
             <motion.div className="space-y-6" variants={fadeIn}>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <Plus className="w-5 h-5 text-white" />
+              {achievements.map((achievement, index) => (
+                <div className="flex gap-4" key={index}>
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <Plus className="w-5 h-5 text-white" />
+                    </div>
                   </div>
+                  <p className="text-gray-600">{achievement}</p>
                 </div>
-                <p className="text-gray-600">
-                  Currently pursuing a degree in{" "}
-                  <span className="font-semibold">
-                    Electronics and Communication Engineering
-                  </span>{" "}
-                  at IIIT Una.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <Plus className="w-5 h-5 text-white" />
-                  </div>
-                </div>
-                <p className="text-gray-600">
-                  Experienced{" "}
-                  <span className="font-semibold">
-                    Full Stack Web Developer
-                  </span>{" "}
-                  with proficiency in building scalable web applications.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <Plus className="w-5 h-5 text-white" />
-                  </div>
-                </div>
-                <p className="text-gray-600">
-                  Passionate about{" "}
-                  <span className="font-semibold">Competitive Programming</span>
-                  , with a drive to solve complex algorithms and challenges.
-                </p>
-              </div>
+              ))}
             </motion.div>
           </motion.div>
         </div>
