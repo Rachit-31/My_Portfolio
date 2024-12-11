@@ -95,22 +95,28 @@ export const experiences = [
 // projects
 export const works = [
   {
+    image: "/Portfolio/SethiHospital.png",
+    title: "Sethi Hospital",
+    websiteLink: "https://sethihospital.com/",
+    githubLink: "",
+  },
+  {
     image: "/Portfolio/IIIT_Una.png",
     title: "IIIT Una",
     websiteLink: "https://iiitu.ac.in/",
     githubLink: "",
   },
   {
-    image: "/Portfolio/Gym.png",
-    title: "Evogym",
-    websiteLink: "",
-    githubLink: "https://github.com/Rachit-31/FitJourney",
-  },
-  {
     image: "/Portfolio/TryOn.png",
     title: "Advance-e-commerece Platform with virtual-try-on",
     websiteLink: "https://advance-ecommerce-beta.vercel.app/",
     githubLink: "https://github.com/Rachit-31/Advance-Ecommerce",
+  },
+  {
+    image: "/Portfolio/Gym.png",
+    title: "Evogym",
+    websiteLink: "",
+    githubLink: "https://github.com/Rachit-31/FitJourney",
   },
   {
     image: "/Portfolio/Portfolio.png",
