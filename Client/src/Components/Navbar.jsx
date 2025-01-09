@@ -132,13 +132,13 @@ export default function Navbar() {
 
       {/* Sidebar Menu */}
       <nav
-        className={`sidebar fixed right-0 top-0 w-64 h-full bg-gray-900 transform transition-transform ${
+        className={`sidebar fixed right-0 top-0 w-64 h-full bg-gray-900 bg-opacity-55 backdrop-blur-md transform transition-transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{ zIndex: 100 }}
       >
         <ul className="space-y-4 p-4">
-          <li>
+          <li className="flex justify-between">
             <Link
               to="experience"
               smooth={true}
@@ -148,7 +148,11 @@ export default function Navbar() {
             >
               Experience
             </Link>
+            <div className="md:hidden flex items-center text-white">
+              <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+            </div>
           </li>
+
           <li>
             <Link
               to="projects"
