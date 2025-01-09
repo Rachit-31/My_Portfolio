@@ -30,7 +30,7 @@ export default function Navbar() {
   const [isBlurred, setIsBlurred] = useState(false);
   const scope = useMenuAnimation(isOpen);
 
-  // Add event listener to track scroll position
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -51,9 +51,7 @@ export default function Navbar() {
     <div ref={scope} className="relative">
       <div
         className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-          isBlurred
-            ? "bg-white/80 backdrop-blur-md shadow-lg"
-            : "bg-tertiary"
+          isBlurred ? "bg-white/80 backdrop-blur-md shadow-lg" : "bg-tertiary"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,6 +91,13 @@ export default function Navbar() {
                 >
                   Portfolio
                 </Link>
+                <Link
+                  to="#"
+                  className="text-black px-2 py-2 rounded-md text-sm font-medium cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blog
+                </Link>
               </div>
             </div>
 
@@ -118,15 +123,19 @@ export default function Navbar() {
 
       {/* Backdrop */}
       <div
-        className={`backdrop fixed inset-0 bg-black transition-opacity ${isOpen ? "block" : "hidden"}`}
+        className={`backdrop fixed inset-0 bg-black transition-opacity ${
+          isOpen ? "block" : "hidden"
+        }`}
         onClick={() => setIsOpen(false)}
-        style={{ opacity: isOpen ? 0.5 : 0 }} // Adjust backdrop opacity based on menu state
+        style={{ opacity: isOpen ? 0.5 : 0 }}
       ></div>
 
       {/* Sidebar Menu */}
       <nav
-        className={`sidebar fixed right-0 top-0 w-64 h-full bg-gray-900 transform transition-transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}
-        style={{ zIndex: 100 }} // Ensure sidebar is above the navbar
+        className={`sidebar fixed right-0 top-0 w-64 h-full bg-gray-900 transform transition-transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        style={{ zIndex: 100 }}
       >
         <ul className="space-y-4 p-4">
           <li>
@@ -171,6 +180,15 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Contact Me
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="#"
+              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
             </Link>
           </li>
         </ul>

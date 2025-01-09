@@ -21,8 +21,8 @@ export const techStack = [
   "TypeScript",
   "C++",
   "SQL",
-  "GraphQL",
-  "GitHub",
+  "Git",
+  "Github",
   "MongoDB",
   "Express",
   "React",
@@ -46,6 +46,11 @@ export const profiles = [
     platform: "CodeChef",
     url: "https://www.codechef.com/users/rachit_31",
     icon: "/CodingProfile/Codechef.svg",
+  },
+  {
+    platform: "Codolio",
+    url: "#",
+    icon: "/CodingProfile/Codolio.svg",
   },
 ];
 
