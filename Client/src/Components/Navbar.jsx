@@ -138,7 +138,21 @@ export default function Navbar() {
         style={{ zIndex: 100 }}
       >
         <ul className="space-y-4 p-4">
-          <li className="flex justify-between">
+        <li className="flex justify-between">
+            <Link
+              to="aboutme"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
+              About Me
+            </Link>
+            <div className="md:hidden flex items-center text-white">
+              <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+            </div>
+          </li>
+          <li>
             <Link
               to="experience"
               smooth={true}
@@ -148,9 +162,6 @@ export default function Navbar() {
             >
               Experience
             </Link>
-            <div className="md:hidden flex items-center text-white">
-              <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
-            </div>
           </li>
 
           <li>
@@ -162,17 +173,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="aboutme"
-              smooth={true}
-              duration={500}
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            >
-              About Me
             </Link>
           </li>
           <li>
