@@ -56,20 +56,13 @@ export const profiles = [
 
 export const achievements = [
   <>
-    Currently pursuing a degree in{" "}
-    <span className="font-semibold">
-      Electronics and Communication Engineering
-    </span>{" "}
-    at IIIT Una.
+    <span className="font-semibold">Successfully Launched 3 Websites</span> – Built and deployed production-ready websites actively used by users.
   </>,
   <>
-    Experienced <span className="font-semibold">Full Stack Web Developer</span>{" "}
-    with proficiency in building scalable web applications.
+    <span className="font-semibold">CodeChef</span>: 2★  Rated competitive programmer.
   </>,
   <>
-    Passionate about{" "}
-    <span className="font-semibold">Competitive Programming</span>, with a drive
-    to solve complex algorithms and challenges.
+    <span className="font-semibold">Technical Head</span> - EIC, IIIT Una: Leading technical initiatives and fostering innovation.
   </>,
 ];
 
@@ -77,7 +70,7 @@ export const achievements = [
 export const experiences = [
   {
     company: "Amvit Pharmaceuticals, Delhi",
-    period: "October 2024 - Present",
+    period: "October 2024 - December 2024",
     role: "Full Stack Developer Intern",
     tags: ["React", "GraphQL", "Full Stack Development", "Tailwind css"],
   },
@@ -99,6 +92,12 @@ export const experiences = [
 
 // projects
 export const works = [
+  {
+    image:"/Portfolio/Esummit.png",
+    title:"E-Summit 2025 IIIT Una",
+    websiteLink:"https://esummit.iiitu.ac.in/",
+    githubLink:"",
+  },
   {
     image: "/Portfolio/SethiHospital.png",
     title: "Sethi Hospital",
