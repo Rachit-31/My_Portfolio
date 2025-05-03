@@ -29,6 +29,7 @@ export const techStack = [
   "Node.js",
   "Tailwind CSS",
   "Bootstrap",
+  "Python"
 ];
 
 export const profiles = [
@@ -69,6 +70,12 @@ export const achievements = [
 // experience section
 export const experiences = [
   {
+    company: "Ernst & Young (EY), Gurugram",
+    period: "May 2025 - Present",
+    role: "Software Engineer Intern",
+    tags: ["Python"],
+  },
+  {
     company: "Amvit Pharmaceuticals, Delhi",
     period: "October 2024 - December 2024",
     role: "Full Stack Developer Intern",
@@ -92,6 +99,12 @@ export const experiences = [
 
 // projects
 export const works = [
+  {
+    image:"/Portfolio/Janhit.png",
+    title:"Janhit",
+    websiteLink:"https://janhit.vercel.app/",
+    githubLink:"https://github.com/Rachit-31/Janhit",
+  },
   {
     image:"/Portfolio/Esummit.png",
     title:"E-Summit 2025 IIIT Una",
