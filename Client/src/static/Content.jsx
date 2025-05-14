@@ -72,8 +72,8 @@ export const experiences = [
   {
     company: "Ernst & Young (EY), Gurugram",
     period: "May 2025 - Present",
-    role: "Software Engineer Intern",
-    tags: ["Python"],
+    role: "Software Development & Testing Intern",
+    tags: ["Python", "GenAI"],
   },
   {
     company: "Amvit Pharmaceuticals, Delhi",
