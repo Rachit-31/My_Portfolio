@@ -129,22 +129,4 @@ export const works = [
     websiteLink: "https://advance-ecommerce-beta.vercel.app/",
     githubLink: "https://github.com/Rachit-31/Advance-Ecommerce",
   },
-  {
-    image: "/Portfolio/Gym.png",
-    title: "Evogym",
-    websiteLink: "",
-    githubLink: "https://github.com/Rachit-31/FitJourney",
-  },
-  {
-    image: "/Portfolio/Portfolio.png",
-    title: "Portfolio Website",
-    websiteLink: "https://rachitjain-31.vercel.app/",
-    githubLink: "https://github.com/Rachit-31/My_Portfolio",
-  },
-  {
-    image: "/Portfolio/Code.png",
-    title: "AI Summarizer",
-    websiteLink: "",
-    githubLink: "https://github.com/Rachit-31/AI_Summarizer",
-  },
 ];
