@@ -64,7 +64,7 @@ const Homepage = () => {
             <motion.a href="https://github.com/Rachit-31" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 hover:text-black" whileHover={{ scale: 1.1 }}>
               <FaGithub className="mr-2" />
             </motion.a>
-            <motion.a href="https://www.linkedin.com/in/rachit-jain-697914256/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 hover:text-black" whileHover={{ scale: 1.1 }}>
+            <motion.a href="https://www.linkedin.com/in/rachitjain2003/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 hover:text-black" whileHover={{ scale: 1.1 }}>
               <FaLinkedin className="mr-2" />
             </motion.a>
             <motion.a href="https://www.instagram.com/thisisrachitjain/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 hover:text-black" whileHover={{ scale: 1.1 }}>

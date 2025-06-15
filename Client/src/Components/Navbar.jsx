@@ -91,13 +91,6 @@ export default function Navbar() {
                 >
                   Portfolio
                 </Link>
-                <Link
-                  to="#"
-                  className="text-black px-2 py-2 rounded-md text-sm font-medium cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Blog
-                </Link>
               </div>
             </div>
 
@@ -184,15 +177,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Contact Me
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            >
-              Blog
             </Link>
           </li>
         </ul>
