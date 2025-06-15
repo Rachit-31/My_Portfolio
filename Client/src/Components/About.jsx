@@ -37,6 +37,18 @@ const AboutMe = () => {
             </div>
 
             <div className="mt-8">
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 transition"
+              >
+                View Resume
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="mt-8">
               <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
               <div className="flex flex-wrap gap-4">
                 {techStack.map((tech, index) => (
@@ -107,7 +119,7 @@ const AboutMe = () => {
                     <path d="M12 6v12M6 12h12" strokeWidth="2" />
                   </svg>
                 </div>
-                <div className="text-5xl font-semibold mb-4">2+ Years</div>
+                <div className="text-5xl font-semibold mb-4">1+ Years</div>
                 <p className="text-gray-600">
                   Experience in Web Development and Competitive Programming.
                 </p>
