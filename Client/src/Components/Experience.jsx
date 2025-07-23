@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { experiences } from "../static/Content";
+import { ArrowUpRight } from "lucide-react";
 
 const container = {
   hidden: { opacity: 1 },
@@ -80,6 +81,17 @@ const Experience = () => {
             <div>
               <h3 className="text-xl font-normal mb-2">{exp.company}</h3>
               <p className="text-gray-600 text-sm">{exp.period}</p>
+              {exp.certificate && (
+                <a
+                  href={exp.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center mt-4 px-4 py-1.5 text-sm font-medium text-white bg-gray-900 hover:bg-gray-700 rounded-full transition-colors duration-200"
+                >
+                  View Certificate <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
+
             </div>
             <div>
               <p className="text-gray-600 mb-4">{exp.role}</p>

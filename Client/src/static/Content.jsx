@@ -21,6 +21,7 @@ export const techStack = [
   "TypeScript",
   "C++",
   "SQL",
+  "PostgreSQL",
   "Git",
   "Github",
   "MongoDB",
@@ -29,7 +30,8 @@ export const techStack = [
   "Node.js",
   "Tailwind CSS",
   "Bootstrap",
-  "Python"
+  "Python",
+  "Django"
 ];
 
 export const profiles = [
@@ -70,8 +72,8 @@ export const achievements = [
 // experience section
 export const experiences = [
   {
-    company: "Ernst & Young (EY), Gurugram",
-    period: "May 2025 - Present",
+    company: "Ernst & Young (EY), Banglore",
+    period: "May 2025 - July 2025",
     role: "Software Development & Testing Intern",
     tags: ["Python", "GenAI"],
   },
@@ -94,6 +96,7 @@ export const experiences = [
       "Tailwind css",
       "HTML",
     ],
+    certificate: "https://drive.google.com/file/d/1TCTz1iLBLAbJ9IpS6cxnwVlZbnQ2rHVC/view",
   },
 ];
 
