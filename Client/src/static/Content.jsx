@@ -72,7 +72,7 @@ export const achievements = [
 // experience section
 export const experiences = [
   {
-    company: "Ernst & Young (EY), Banglore",
+    company: "Ernst & Young (EY), Bangalore",
     period: "May 2025 - July 2025",
     role: "Software Development & Testing Intern",
     tags: ["Python", "GenAI"],
