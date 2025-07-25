@@ -72,17 +72,18 @@ export const achievements = [
 // experience section
 export const experiences = [
   {
-    company: "Ernst & Young (EY), Bangalore",
+    company: "Ernst & Young (EY), Gurugram",
     period: "May 2025 - July 2025",
     role: "Software Development & Testing Intern",
     tags: ["Python", "GenAI"],
+    certificate: "https://drive.google.com/file/d/1sU0VpOvAU-87QK__TRg8rryBF9JEFA4N/view?usp=sharing"
   },
   {
     company: "Amvit Pharmaceuticals, Delhi",
     period: "October 2024 - December 2024",
     role: "Full Stack Developer Intern",
     tags: ["React", "GraphQL", "Full Stack Development", "Tailwind css"],
-  },
+  },  
   {
     company: "Indian Institute of Information Technology, Una (IIIT Una)",
     period: "April 2024 - June 2024",
