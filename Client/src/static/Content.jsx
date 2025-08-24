@@ -79,10 +79,11 @@ export const experiences = [
     certificate: "https://drive.google.com/file/d/1sU0VpOvAU-87QK__TRg8rryBF9JEFA4N/view?usp=sharing"
   },
   {
-    company: "Country Nutrition, Delhi",
+    company: "AP Health and Wellness Private Limited",
     period: "October 2024 - December 2024",
     role: "Full Stack Developer Intern",
     tags: ["React", "GraphQL", "Full Stack Development", "Tailwind css"],
+    certificate: "https://drive.google.com/file/d/19cpijXlOQjS9pn-DHSKSoZH98qTS0Efg/view?usp=sharing"
   },  
   {
     company: "Indian Institute of Information Technology, Una (IIIT Una)",
