@@ -37,7 +37,7 @@ export const techStack = [
 export const profiles = [
   {
     platform: "LeetCode",
-    url: "#",
+    url: "https://leetcode.com/u/speedRun2100/",
     icon: "/CodingProfile/Leetcode.svg",
   },
   {
@@ -84,7 +84,7 @@ export const experiences = [
     role: "Full Stack Developer Intern",
     tags: ["React", "GraphQL", "Full Stack Development", "Tailwind css"],
     certificate: "https://drive.google.com/file/d/19cpijXlOQjS9pn-DHSKSoZH98qTS0Efg/view?usp=sharing"
-  },  
+  },
   {
     company: "Indian Institute of Information Technology, Una (IIIT Una)",
     period: "April 2024 - June 2024",
@@ -105,16 +105,16 @@ export const experiences = [
 // projects
 export const works = [
   {
-    image:"/Portfolio/Janhit.png",
-    title:"Janhit",
-    websiteLink:"https://janhit.vercel.app/",
-    githubLink:"https://github.com/Rachit-31/Janhit",
+    image: "/Portfolio/Janhit.png",
+    title: "Janhit",
+    websiteLink: "https://janhit.vercel.app/",
+    githubLink: "https://github.com/Rachit-31/Janhit",
   },
   {
-    image:"/Portfolio/Esummit.png",
-    title:"E-Summit 2025 IIIT Una",
-    websiteLink:"https://esummit.iiitu.ac.in/",
-    githubLink:"",
+    image: "/Portfolio/Esummit.png",
+    title: "E-Summit 2025 IIIT Una",
+    websiteLink: "https://esummit.iiitu.ac.in/",
+    githubLink: "",
   },
   {
     image: "/Portfolio/SethiHospital.png",
@@ -135,3 +135,16 @@ export const works = [
     githubLink: "https://github.com/Rachit-31/Advance-Ecommerce",
   },
 ];
+
+
+export const developerInfo = {
+  name: "Rachit Jain",
+  passion: "Software Development",
+  status: "Always Learning",
+  stats: {
+    QuestionsSolved: "1000+",
+    Contests: "75+",
+    LeetCodeRank: "Top 16%",
+    Codechef: "2★",
+  },
+};

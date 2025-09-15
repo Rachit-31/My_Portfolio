@@ -6,6 +6,7 @@ import {
   profiles,
   achievements,
   AboutDetail,
+  developerInfo
 } from "../static/Content.jsx";
 
 const fadeIn = {
@@ -125,13 +126,46 @@ const AboutMe = () => {
                 </p>
               </div>
 
-              <motion.div className="relative" variants={fadeIn}>
-                <img
-                  src="/Rachit2.png"
-                  alt="Rachit Jain"
-                  className="w-full h-auto rounded-xl"
-                />
-              </motion.div>
+              <div className="w-full bg-white rounded-xl overflow-hidden shadow-sm border">
+                {/* Top bar (like VSCode/terminal tabs) */}
+                <div className="bg-gray-100 px-4 py-2 flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+
+                {/* Code-like content */}
+                <div className="p-4 text-gray-800 font-mono text-sm">
+                  <div>
+                    <span className="text-purple-600">const</span>{" "}
+                    <span className="text-blue-600">developer</span> = {"{"}
+                  </div>
+
+                  <div className="ml-6">
+                    <span className="text-red-500">name</span>: {developerInfo.name},
+                  </div>
+                  <div className="ml-6">
+                    <span className="text-red-500">passion</span>: {developerInfo.passion},
+                  </div>
+                  <div className="ml-6">
+                    <span className="text-red-500">status</span>: {developerInfo.status},
+                  </div>
+
+                  <div className="ml-6">
+                    <span className="text-red-500">stats</span>: {"{"}
+                  </div>
+                  {Object.entries(developerInfo.stats).map(([key, value], index, arr) => (
+                    <div key={key} className="ml-12">
+                      {key}: <span className="text-green-600">"{value}"</span>
+                      {index < arr.length - 1 && ","}
+                    </div>
+                  ))}
+                  <div className="ml-6">{"}"},</div>
+
+                  <div>{"}"}</div>
+                </div>
+              </div>
+
             </motion.div>
 
             <motion.div className="space-y-6" variants={fadeIn}>
