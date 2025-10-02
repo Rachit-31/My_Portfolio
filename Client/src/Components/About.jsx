@@ -126,37 +126,37 @@ const AboutMe = () => {
                 </p>
               </div>
 
-              <div className="w-full bg-white rounded-xl overflow-hidden shadow-sm border">
+              <div className="w-full bg-black rounded-xl overflow-hidden shadow-md border border-gray-700">
                 {/* Top bar (like VSCode/terminal tabs) */}
-                <div className="bg-gray-100 px-4 py-2 flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="bg-gray-900 px-4 py-2 flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-gray-700 rounded-full"></div>
+                  <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+                  <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
                 </div>
 
                 {/* Code-like content */}
-                <div className="p-4 text-gray-800 font-mono text-sm">
+                <div className="p-4 text-gray-200 text-base leading-relaxed tracking-wide">
                   <div>
-                    <span className="text-purple-600">const</span>{" "}
-                    <span className="text-blue-600">developer</span> = {"{"}
+                    <span className="text-gray-400">const</span>{" "}
+                    <span className="text-gray-200">Software_developer</span> = {"{"}
                   </div>
 
                   <div className="ml-6">
-                    <span className="text-red-500">name</span>: {developerInfo.name},
+                    <span className="text-gray-500">name</span>: {developerInfo.name},
                   </div>
                   <div className="ml-6">
-                    <span className="text-red-500">passion</span>: {developerInfo.passion},
+                    <span className="text-gray-500">passion</span>: {developerInfo.passion},
                   </div>
                   <div className="ml-6">
-                    <span className="text-red-500">status</span>: {developerInfo.status},
+                    <span className="text-gray-500">status</span>: {developerInfo.status},
                   </div>
 
                   <div className="ml-6">
-                    <span className="text-red-500">stats</span>: {"{"}
+                    <span className="text-gray-500">stats</span>: {"{"}
                   </div>
                   {Object.entries(developerInfo.stats).map(([key, value], index, arr) => (
                     <div key={key} className="ml-12">
-                      {key}: <span className="text-green-600">"{value}"</span>
+                      {key}: <span className="text-gray-300">"{value}"</span>
                       {index < arr.length - 1 && ","}
                     </div>
                   ))}
@@ -165,6 +165,7 @@ const AboutMe = () => {
                   <div>{"}"}</div>
                 </div>
               </div>
+
 
             </motion.div>
 
