@@ -39,7 +39,7 @@ const AboutMe = () => {
 
             <div className="mt-8">
               <a
-                href="/"
+                href="/Rachit_Jain_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 transition"
