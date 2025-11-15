@@ -47,7 +47,7 @@ export const profiles = [
   },
   {
     platform: "CodeChef",
-    url: "https://www.codechef.com/users/rachit_31",
+    url: "https://www.codechef.com/users/speedrun2100",
     icon: "/CodingProfile/Codechef.svg",
   },
   {
@@ -62,7 +62,10 @@ export const achievements = [
     <span className="font-semibold">Successfully Launched 3 Websites</span> – Built and deployed production-ready websites actively used by users.
   </>,
   <>
-    <span className="font-semibold">CodeChef</span>: 2★  Rated competitive programmer.
+    <span className="font-semibold">CodeChef</span>: 3★  Rated competitive programmer.
+  </>,
+  <>
+    <span className="font-semibold">Codeforces</span>: Pupil on Codeforces.
   </>,
   <>
     <span className="font-semibold">Technical Head</span> - EIC, IIIT Una: Leading technical initiatives and fostering innovation.
@@ -142,9 +145,10 @@ export const developerInfo = {
   passion: "Software Development",
   status: "Always Learning",
   stats: {
-    QuestionsSolved: "1000+",
+    QuestionsSolved: "1200+",
     Contests: "75+",
     LeetCodeRank: "Top 16%",
-    Codechef: "2★",
+    Codechef: "3★",
+    Codeforces: "Pupil"
   },
 };
