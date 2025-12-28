@@ -30,8 +30,7 @@ export const techStack = [
   "Node.js",
   "Tailwind CSS",
   "Bootstrap",
-  "Python",
-  "Django"
+  "Python"
 ];
 
 export const profiles = [
@@ -42,7 +41,7 @@ export const profiles = [
   },
   {
     platform: "Codeforces",
-    url: "#",
+    url: "https://codeforces.com/profile/rachitjainjaipur",
     icon: "/CodingProfile/Codeforces.svg",
   },
   {
@@ -52,7 +51,7 @@ export const profiles = [
   },
   {
     platform: "Codolio",
-    url: "#",
+    url: "https://codolio.com/profile/Rachit_2003",
     icon: "/CodingProfile/Codolio.svg",
   },
 ];
@@ -74,6 +73,13 @@ export const achievements = [
 
 // experience section
 export const experiences = [
+  {
+    company: "OneBanc, Gurugram",
+    period: "Dec 2025 - Present",
+    role: "Software Development Intern",
+    tags: ["JavaScript", "CSS", "c#"],
+    certificate: ""
+  },
   {
     company: "Ernst & Young (EY), Gurugram",
     period: "May 2025 - July 2025",
@@ -147,7 +153,7 @@ export const developerInfo = {
   stats: {
     QuestionsSolved: "1200+",
     Contests: "75+",
-    LeetCodeRank: "Top 16%",
+    LeetCodeRank: "Top 14%",
     Codechef: "3★",
     Codeforces: "Pupil"
   },
