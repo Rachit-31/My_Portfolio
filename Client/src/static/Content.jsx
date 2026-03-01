@@ -74,10 +74,17 @@ export const achievements = [
 // experience section
 export const experiences = [
   {
+    company: "Foodbot AI, Noida",
+    period: "February 2026 - Present",
+    role: "Software Engineer Intern",
+    tags: ["Agentic AI", "Python", "Node.js", "Typescript", "React.js", "Next.js", "SQL"],
+    certificate: ""
+  },
+  {
     company: "OneBanc, Gurugram",
-    period: "Dec 2025 - Present",
+    period: "December 2025 - February 2026",
     role: "Software Development Intern",
-    tags: ["JavaScript", "CSS", "c#"],
+    tags: ["JavaScript", "CSS"],
     certificate: ""
   },
   {
