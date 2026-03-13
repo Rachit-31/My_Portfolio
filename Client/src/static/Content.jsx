@@ -77,7 +77,7 @@ export const experiences = [
     company: "Foodbot AI, Noida",
     period: "February 2026 - Present",
     role: "Software Engineer Intern",
-    tags: ["Agentic AI", "Python", "Node.js", "Typescript", "React.js", "Next.js", "SQL"],
+    tags: ["Agentic AI", "Node.js", "Typescript", "React.js", "SQL"],
     certificate: ""
   },
   {
