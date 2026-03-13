@@ -85,7 +85,7 @@ export const experiences = [
     period: "December 2025 - February 2026",
     role: "Software Development Intern",
     tags: ["JavaScript", "CSS"],
-    certificate: ""
+    certificate: "https://drive.google.com/file/d/1ueqkc327StM1E01eXJHUg980XxOyaL0y/view?usp=sharing"
   },
   {
     company: "Ernst & Young (EY), Gurugram",
